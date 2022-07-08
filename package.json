@@ -4,7 +4,8 @@
   "description": "web, learn, developer",
   "main": "./src/server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start-dev": "nodemon ./src/server.js",
+    "start-prod": "NODE_ENV=production node src/server.js"
   },
   "author": "gandi jen",
   "license": "ISC",
