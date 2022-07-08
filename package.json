@@ -1,0 +1,15 @@
+{
+  "name": "backen_notes",
+  "version": "1.0.0",
+  "description": "web, learn, developer",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "gandi jen",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "nanoid": "^3.3.4"
+  }
+}
