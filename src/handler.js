@@ -4,10 +4,10 @@ const { notes } = require("./notes");
 exports.notesHandler = {
   createNote: (req, h) => {
     const id = nanoid(16);
-    const { tittle, tags, body } = req.payload;
+    const { title, tags, body } = req.payload;
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
-    const newNote = { id, tittle, tags, body, createdAt, updatedAt };
+    const newNote = { id, title, tags, body, createdAt, updatedAt };
     notes.push(newNote);
 
     const isSuccess = notes.filter((note) => note.id === id).length > 0;
@@ -68,7 +68,7 @@ exports.notesHandler = {
   },
   updateNote: (req, h) => {
     const { id } = req.params;
-    const { tittle, tags, body } = req.payload;
+    const { title, tags, body } = req.payload;
     const updatedAt = new Date().toISOString();
 
     const index = notes.findIndex((n) => n.id === id);
@@ -76,7 +76,7 @@ exports.notesHandler = {
     if (index >= 0) {
       notes[index] = {
         ...notes[index],
-        tittle,
+        title,
         tags,
         body,
         updatedAt,
